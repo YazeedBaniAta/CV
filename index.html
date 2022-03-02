@@ -3,530 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="The YAZEED BA CV" />
+    <meta name="description" content="Interactive Resume" />
+    <meta name="author" content="yazeed.ba" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="icon" href="assets/image/favicon.ico">
-    <title>Yazeed.BA</title>
+    <title>Interactive Resume</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!--main Style -->
     <link rel="stylesheet" href="assets/Css/app.css">
-
-    <!-- font awosme -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-
+    <!-- AOS Animation on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+<body>
+
+<!-------------- loader-wrapper page-------------->
+<div class="loader-wrapper">
+    <div class="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<!-- /End loader-wrapper page-->
 
 
-
-<!-- NavBar -->
-<section id="nav-bar">
-    <nav id="navbar" class="navbar navbar-inverse navbar-dark navbar-expand-lg site_navigation" style="display: flex;">
-        <a class="navbar-brand font-weight-bold" style="font-family:Rubik;" href="index.html" ><span style="color: #79B530;">Yazeed</span> Resume</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" >
-            <ul class="navbar-nav m-auto" style="font-family:Rubik;" >
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" href="#profile">Profile</a>
-                </li>
-                <li class="nav-item dropdown active">
-                    <a class="nav-link cool-Link" href="#Experiences">Experiences</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" href="#Abilities">Abilities</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" href="#project">project</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" href="#contact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <nav id="navbar_top" class="navbar navbar-inverse navbar-expand-lg navbar-dark" style="background-color: #F3F1F5; display: none;">
-        <a class="navbar-brand font-weight-bold" style="font-family:Rubik; color: #7F7C82" href="index.html" >Yazeed Resume</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav m-auto" style="font-family:Rubik;" >
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link active" style="color: #7F7C82" href="#profile">Profile</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" style="color: #7F7C82" href="#Experiences">Experiences</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" style="color: #7F7C82" href="#Abilities">Abilities</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" style="color: #7F7C82" href="#project">Project</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link cool-Link" style="color: #7F7C82" href="#contact">Contact</a>
-                </li>
-            </ul>
-
-        </div>
-    </nav>
-
-</section>
-<!-- /End NavBar -->
+<!-------------- scroll-progress-------------->
+<div id="scroll-progress"></div>
+<!--/End scroll-progress -->
 
 
-<!-- main -->
-<section class="top_container" id="top">
-    <div class="container name">
-        <section class="cd-intro">
-            <h1 class="cd-headline clip is-full-width">
-                <span class="cd-words-wrapper">
-				<b class="is-visible">Iam Yazeed Bani-Ata</b>
-				<b>Iam full Stack Web Developer</b>
-			</span>
-            </h1>
-        </section> <!-- cd-intro -->
-        <hr style="width: 20%; border-color: gray; border-style: solid; border-width: 1px;">
-        <p style="font-family: 'Akaya Telivigala', cursive;">Interactive resume</p>
-    </div>
-    <img class="img_fluid" width="100%" src="assets/image/top_img.jpg" alt="begin_pic">
-</section>
-<!-- /End main -->
-
-
-<!-- profile -->
-<section id="profile">
-    <div class="container profile mw-100 py-5">
-        <h1 class="font-weight-bold text-center" style="font-family: 'RocknRoll One', sans-serif;">Profile</h1>
-        <p class="text-center text-secondary" style="font-size:1.5vw; font-family: 'Playfair Display', serif;">I'm a creative PHP web developer</p>
-        <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
-        <br>
-        <div class="row" style="margin-left: 5%;">
-            <div class="col-md-4">
-                <h3>About Me</h3>
-                <p>Iam an all-round web developer. I am expert programmer with good knowledge of front-end techniques.
-                    I love spending time on fixing little details and optimizing web apps. Also I like working in a team.</p>
+<!-------------- header section-------------->
+<section id="header">
+    <div class="container text-center">
+        <div class="user-box">
+            <img class="img-fluid  w-50" src="assets/image/header-img.png" alt="headerImage">
+            <div class='console-container h1'>
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>|</div>
             </div>
-            <div class="col-md-4 text-center">
-                <img src="assets/image/cv-image.JPG" alt="cv-image" class="img-fluid rounded-circle img-thumbnail" width="246" height="246">
-            </div>
-            <div class="col-md-4">
-                <h3>Details</h3>
+            <div class="text">
+                <p>IAM A</p>
                 <p>
-                    <br>
-                    <strong>Name:</strong>
-                    <br>
-                    yazeed Nedal Bani-Ata
-                    <br>
-                    <strong>Age:</strong>
-                    <br>
-                    23
-                    <br>
-                    <strong>Location:</strong>
-                    <br>
-                    irbid/jordan
-                    <br>
+                    <span class="word wisteria">FULL</span>
+                    <span class="word belize">STACK</span>
+                    <span class="word pomegranate">DEVELOPER.</span>
                 </p>
             </div>
         </div>
-        <hr style="margin-top: 7%;">
     </div>
+    <a href="#user-info" class="scroll-down">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </a>
 </section>
-<!-- /End profile -->
+<!-- /End header section -->
 
+<!-------------- Main -------------->
+<section id = "user-info">
 
-<!-- Experiences -->
-<section id="Experiences">
-    <div class="container Experiences mw-100 py-5">
-        <h1 class="font-weight-bold text-center" style="font-family: 'RocknRoll One', sans-serif;">Experience</h1>
-        <p class="text-center text-secondary" style="font-size:1.5vw; font-family: 'Playfair Display', serif;">
-            “Protons give an atom its identity, electrons its personality.”
-            <br>
-            - Bill Bryson, A short history of nearly everything
-        </p>
-        <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
-
-        <h3 style="margin-left: 6%;">Education</h3>
-        <div class="row" style="margin-left: 5%;">
-            <div class="col-md-4">
-                <h4>ALBalqa Apllid University</h4>
-                <p> Jun 2020 - Feb 2021</p>
-            </div>
-            <div class="col-md-4">
-                <p>
-                    <strong>Bachelor - Computer Science</strong>
-                    <br>
-                    <span class="hidden-phone">The education was mainly Java-based programming,
-                    but I also learned about SQL, PHP, MVC, UML and more. During my time in college,
-                    I specialized in multimedia.
-                    Here I learned about gaming -the importance of
-                    OOP-, web- and user experience and design.</span>
-                    <br>
-                    <br>
-                    <span class="text-success">
-                    <i class="fas fa-map-marked-alt "></i>
-                    Alhusan/Irbid/Jordan
-                </span>
-                </p>
-            </div>
-        </div>
-        <hr>
-    </div>
-</section>
-<!-- /End Experiences -->
-
-
-<!-- Abilities -->
-<section id="Abilities">
-    <div class="container Skills mw-100 py-5">
-        <h1 class="font-weight-bold text-center" style="font-family: 'RocknRoll One', sans-serif;">Abilities</h1>
-        <p class="text-center text-secondary" style="font-size:1.5vw; font-family: 'Playfair Display', serif;">
-            “Life without knowledge is death in disguise.”
-            <br>
-            - Talib Kweli
-        </p>
-        <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
-        <h3 style="margin: 5% 0 1% 15%; ">Skills</h3>
-        <div class="row" style="margin-left: 15%;">
-            <div class="col-md-4">
-                <ul style="list-style-type: none">
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Bootstrap Framework</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
+    <!-------------- Nav bar -------------->
+    <div class="nav-bar">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#header"><img src="assets/image/name_logo.jpg"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">PROFILE</a>
                     </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Html5</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume">RESUME</a>
                     </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Css(3)</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Abilities">ABILITIES</a>
                     </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>MySQL</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#project">PROJECT</a>
                     </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Ajax</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </div>
-
-            <div class="col-md-4">
-                <ul style="list-style-type: none">
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>PHP</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-					<li class="p-1">
-                        <div class="trans">
-                            <span>Laravel Framework</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>JQuery</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Javascript</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>JSON</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
-        <h3 style="margin: 5% 0 1% 15%; ">Languages</h3>
-
-        <div class="row" style="margin-left: 15%;">
-            <div class="col-md-4">
-                <ul style="list-style-type: none">
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>Arabic</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="p-1">
-                        <div class="trans">
-                            <span>English</span>
-                            <div class="rating text-info" style="float: right;">
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="fas fa-star"></i></span>
-                                <span><i class="far fa-star"></i></span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <hr style="margin-top: 7%;">
+        </nav>
     </div>
-</section>
-<!-- /End Abilities -->
+    <!--/End Nav bar-->
 
-
-<!-- project -->
-<section id="project">
-    <div class="container project mw-100 py-5">
-        <h1 class="font-weight-bold text-center" style="font-family: 'RocknRoll One', sans-s erif;">Projects</h1>
-        <p class="text-center text-secondary" style="font-size:1.5vw; font-family: 'Playfair Display', serif;">
-            “You can do anything you set your mind to.”
-            <br>
-            - Benjamin Franklin
-        </p>
-        <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
-        <div class="row" style="margin-left: 10%;">
-            <div class="col-md-6">
-                <div class="grid">
-                    <figure class="effect-sarah">
-                        <img src="assets/image/eimg.png">
-                        <figcaption>
-                            <h2>Radmy Shop</h2>
-                            <p >Radmy Shop,is a ecommerce web site.
-                            <br>
-                                <strong>Tags:</strong>
-                                <br>
-                                "PHP, Html5, Css(3), JavaScript, Ajax, JQuery, Bootstrap"
-                            </p>
-                            <a href="https://github.com/YazeedBaniAta/Ecommerce.git" target="_blank">View in github</a>
-                        </figcaption>
-                    </figure>
+    <!-------------- About Me -------------->
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center" data-aos="fade-right" data-aos-duration="1500">
+                   <section class="wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; -webkit-animation-delay: 0.1s; -moz-animation-delay: 0.1s; animation-delay: 0.1s;">
+                       <img class="img-fluid profile-img" src="assets/image/about-image.png" alt="about-image">
+                   </section>
                 </div>
-            </div>
-			
-			<div class="col-md-6">
-                <div class="grid">
-                    <figure class="effect-sarah">
-                        <img src="assets/image/QRimg.png">
-                        <figcaption>
-                            <h2 >Generate QRCode</h2>
-                            <p >To Generate your QRCode(Text, phone, Email)
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1500">
+                    <h3 class="text-white">About Me</h3>
+                    <p class="text-white" style="line-height: 30px;">Iam an all-round web developer.
+                        I'm an all-round web developer.
+                        I am a programmer withgood knowledge of front-end and back-end techniques.
+                        love spending time on fixing little details and optimizingweb apps.
+                        Also I like working in a team, that make me learnfaster and much more.
+                    </p>
+                    <hr>
+                    <div class="details-bar">
+                        <h3 class="text-white">Details</h3>
+                        <p class="text-white">
+                            <b>Name:</b>
                             <br>
-                                <strong>Tags:</strong>
-                                <br>
-                                "PHP, Laravel Framework, LiveWire, Html5, ,Css(3), JavaScript, Bootstrap"
-                            </p>
-                            <a href="https://github.com/YazeedBaniAta/GeneratQRCode.git" target="_blank">View in github</a>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
-			
-        </div>
-
-    </div>
-	
-	
-	
-</section>
-<!-- /End project -->
-
-
-<!-- contact -->
-<section id="contact">
-    <div class="container contact mw-100 py-5">
-        <h1 class="font-weight-bold text-center" style="font-family: 'RocknRoll One', sans-s erif;">Contact</h1>
-        <p class="text-center text-secondary" style="font-size:1.5vw; font-family: 'Playfair Display', serif;">
-            “If I had asked people what they wanted, they would have said faster horses. ”
-            <br>
-            - Henry Ford
-        </p>
-        <hr style="width: 60%; margin-top: 5%; border-color: darkgray; border-style: solid; border-width: 1px;">
-
-        <div class="row" style="margin-left: 15%; margin-top: 5%;">
-            <div class="col-md-6">
-                <ul style="list-style-type: none">
-                    <li class="py-3">
-                        <a href="https://www.facebook.com/yazeed.baniata.7" target="_blank" class="footer-social">
-                            <span><i class="fab fa-facebook-square icon fa-2x" style="color: #4267B2;"></i></span>
-                            <span style="font-size: 90%;">http://facebook.com/yazeed.baniata</span>
-                        </a>
-                    </li>
-                    <li class="py-3">
-                        <a href="http://linkedin.com/in/yazeed-bani-ata-9a2b7b208" target="_blank" class="footer-social">
-                            <span><i class="fab fa-linkedin icon fa-2x" style="color: #55acee;"></i></span>
-                            <span style="font-size: 90%;">http://linkedin.com/in/yazeed-bani-ata</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul style="list-style-type: none">
-                    <li class="py-3">
-                        <a href="mailto:yazeedata18@gmail.com" target="_blank" class="footer-social">
-                            <span><i class="fas fa-at icon fa-2x" style="color:lightblue;"></i></span>
-                            <span style="font-size: 90%;">http://yazeedata18@gmail.com</span>
-                        </a>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <hr style="width: 60%; margin-top: 5%; border-color: darkgray; border-style: solid; border-width: 1px;">
-
-        <div class="copyright-area">
-            <div class="container">
-                <div class="text-center text-lg">
-                    <div class="copyright-text">
-                        <p>Copyright &copy; 2021, All Right Reserved</p>
+                            <label>yazeed Nedal Bani-Ata</label>
+                            <br><br>
+                            <b>Location:</b>
+                            <br>
+                            <label><i class="fas fa-map-marked-alt text-success"></i> &nbsp; Amman/Jordan</label>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<!-- /End contact -->
+    <!-- /End About Me -->
 
-
-<!-- Loaded Page --->
-<div class="loader-wrapper" id="demo-content">
-    <div class="loader">
-        <h1 class="jt --debug">
-          <span class="jt__row">
-              <span class="jt__text">Yazeed.BA</span>
-          </span>
-           <span class="jt__row jt__row--sibling" aria-hidden="true">
-               <span class="jt__text">Yazeed.BA</span>
-            </span>
-            <span class="jt__row jt__row--sibling" aria-hidden="true">
-                <span class="jt__text">Yazeed.BA</span>
-            </span>
-            <span class="jt__row jt__row--sibling" aria-hidden="true">
-                <span class="jt__text">Yazeed.BA</span>
-            </span>
-        </h1>
+    <!-------------- Social Icons -------------->
+    <div class="social-icons">
+        <ul>
+            <a href="http://linkedin.com/in/yazeed-bani-ata-9a2b7b208" target="_blank"><li><i class="fa fa-linkedin"></i></li></a>
+            <a href="https://github.com/YazeedBaniAta" target="_blank"><li><i class="fa fa-github"></i></li></a>
+            <a href="https://www.facebook.com/yazeed.baniata.7" target="_blank"><li><i class="fa fa-facebook"></i></li></a>
+        </ul>
     </div>
-    <div class="loder-section left-section"></div>
-    <div class="loder-section right-section"></div>
-</div>
-<!-- /End Loaded Page --->
+    <!-- /End Social Icons -->
 
+    <!-------------- Resume -------------->
+    <div class="resume" id="resume">
+        <div class="container">
+            <h1 class="font-weight-bold text-center">Resume</h1>
+            <p class="text-center text-dark h6" style="font-family: 'Shizuru', cursive;">
+                “Protons give an atom its identity, electrons its personality.”
+                <br>
+                - Bill Bryson, A short history of nearly everything
+            </p>
+            <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up-right" data-aos-duration="1500">
+                    <h3 class="text-center">My Experience</h3>
+                    <ul class="timeline">
+                        <li>
+                            <h4><span>2019 - </span> freeLancer</h4>
+                            <p>
+                                <b>Duration</b> - 6mo[may 2019 to Dec 2019]<br>
+                                <b>location</b> - Remotely
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6" data-aos="fade-up-left" data-aos-duration="1500">
+                    <h3 class="text-center">My Education</h3>
+                    <ul class="timeline">
+                        <li>
+                            <h4><span>2021 - </span> Bachelor of computer science</h4>
+                            <p>
+                                The education was mainly Java-based programming,
+                                but I also learned about SQL, PHP, MVC, UML and more.
+                                During my time in college, I specialized in multimedia.
+                                Here I learned about gaming -the importance of OOP-,
+                                web- and user experience and design.<br>
+                                <b>University</b> - ALBalqa Apllid University<br>
+                                <b>Session</b> - [2017 to 2021]<br>
+                                <b>GBA</b> - Very Good(3.64)
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/End Resume -->
 
+    <!-------------- Abilities -------------->
+    <div class="Abilities" id="Abilities">
+        <div class="container Skills mw-100">
+            <h1 class="font-weight-bold text-center">Abilities</h1>
+            <p class="text-center text-white" style="font-family: 'Shizuru', cursive;">
+                “Life without knowledge is death in disguise.”
+                <br>
+                - Talib Kweli
+            </p>
+            <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
+            <h3 class="mt-5 ml-4">Skills</h3>
+            <div class="row d-flex align-items-center">
+                <div class="col-md-3">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>Bootstrap Framework</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%">
+                                    85%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>Html5</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%">
+                                    100%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>Css(3)</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 95%">
+                                    95%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>Javascript</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%">
+                                    90%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>MySQL</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 95%">
+                                    95%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>Ajax</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%">
+                                    90%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>PHP</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%">
+                                    90%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>Laravel Framework</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%">
+                                    85%
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label>JQuery</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 80%">
+                                    80%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>JSON</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%" data-percentage="82">
+                                    90%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-<!-- For Go To Top  Button -->
-<a id="BackToTop" title="Go To Top" class="btn btn-primary btn-sm go-to-top" href="#" role="button">
+            <hr class="mt-5">
+            <h3 class="mt-3 ml-4">Language</h3>
+            <div class="row mt-2 d-flex align-items-center">
+                <div class="col-md-4">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>Arabic</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%">
+                                    100%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="Abilities-timeline">
+                        <li>
+                            <label>English</label>
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 85%">
+                                    85%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /End Abilities -->
+
+    <!-------------- My project -------------->
+    <div class="project" id="project">
+        <div class="container">
+            <h1 class="text-center">My Project</h1>
+            <p class="text-center text-black h6" style="font-family: 'Shizuru', cursive;">
+                “You can do anything you set your mind to.”<br>
+                - Benjamin Franklin
+            </p>
+            <hr style="width: 60%; border-color: darkgray; border-style: solid; border-width: 1px;">
+            <div class="row mt-3 justify-content-md-center">
+                <div class="col-md-5" data-aos="zoom-in-right" data-aos-duration="1500">
+                    <figure>
+                        <img src="assets/image/eimg.png" class="img-fluid" alt="E-C"/>
+                        <figcaption>
+                            <p>
+                                <label class="h3 font-italic font-weight-bold"><i class="fa fa-shopping-cart"></i> &nbsp; RADMY Shop</label><br>
+                                <b>Tags:</b><br>
+                                "PHP, Laravel Framework, LiveWire, Html5, ,Css(3), JavaScript, Bootstrap"<br>
+                                <a class="btn btn-primary" href="https://github.com/YazeedBaniAta/Ecommerce.git" target="_blank">View in github</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-5" data-aos="zoom-in-left" data-aos-duration="1500">
+                    <figure>
+                        <img src="assets/image/QRimg.png" class="img-fluid" alt="E-C"/>
+                        <figcaption>
+                            <p>
+                                <label class="h3 font-italic font-weight-bold"><i class="fa fa-qrcode"></i> &nbsp; Generate QRCode</label><br>
+                                <b>Tags:</b><br>
+                                "PHP, Laravel Framework, LiveWire, Html5, ,Css(3), JavaScript, Bootstrap"<br>
+                                <a class="btn btn-primary" href="https://github.com/YazeedBaniAta/GeneratQRCode.git" target="_blank">View in github</a>
+                            </p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /End My project -->
+
+    <!-------------- Contact -------------->
+    <div class="contact" id="contact">
+        <div class="container text-center">
+            <h1 class="text-white">Contact</h1>
+            <p class="text-center text-white" style="font-size:1.5vw; font-family: 'Shizuru', cursive;">
+                “If I had asked people what they wanted, they would have said faster horses. ”
+                <br>
+                - Henry Ford
+            </p>
+
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1500">
+                    <a class="footer-social" href="https://www.facebook.com/yazeed.baniata.7" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                        <p>Yazeed Bani-Ata</p>
+                    </a>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                    <a class="footer-social">
+                        <i class="fa fa-phone-square"></i>
+                        <p>+96279896312</p>
+                    </a>
+                </div>
+                <div class="col-md-4" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500">
+                    <a class="footer-social" href="http://linkedin.com/in/yazeed-bani-ata-9a2b7b208" target="_blank">
+                        <i class="fa fa-linkedin-square"></i>
+                        <p>yazeed-bani-ata</p>
+                    </a>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary" id="download">
+                <i class="fa fa-download" title="click to download Resume"> &nbsp; Resume</i>
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a class="text-white" href="mailto:yazeedata18@gmail.com" target="_blank">
+                    <i class="fa fa-envelope"> &nbsp; Mail Me</i>
+                </a>
+            </button>
+        </div>
+        <iframe id="my_iframe" style="display:none;"></iframe>
+        <div class="footer text-center">
+            <p>Copyright &copy; <span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> ,All Right Reserved  </p>
+        </div>
+    </div>
+    <!-- /End Contact -->
+
+</section>
+<!-- /End Main -->
+
+<!-------------- Go_To_Top -------------->
+<a id="BackToTop" title="Go To Top" class="btn btn-dark btn-sm go-to-top" href="#" role="button">
     <i class="fas fa-chevron-up"></i>
 </a>
-<!-- /For Go To Top  Button -->
+<!-- /End Go_To_Top -->
 
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
 <!-- JS  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-<!-- modernizr -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<!-- main Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- To download File -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<!-- smooth-scroll -->
+<script src="assets/Js/smooth-scroll.js"></script>
+<!-- AOS Animation on scroll -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Custom Js -->
 <script src="assets/Js/app.js"></script>
-
 
 </body>
 </html>
